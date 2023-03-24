@@ -1,0 +1,20 @@
+.footer {
+margin-top: -1px;
+    padding: 40px 0 40px;
+    background: var(--black);
+    color: var(--gray);
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+
+    &__link {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+}

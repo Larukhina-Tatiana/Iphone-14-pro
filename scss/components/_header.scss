@@ -1,0 +1,38 @@
+.header {
+    padding: 33px 0 32px;
+    font-size: 24px;
+    line-height: calc(29/24);
+    background: var(--black);
+    color: #717171;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    flex-basis: 0;
+
+    &__link {
+        color: inherit;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+}
+
+.phone {
+    text-align: end;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: currentColor;
+    flex-grow: 1;
+    flex-basis: 0;
+}

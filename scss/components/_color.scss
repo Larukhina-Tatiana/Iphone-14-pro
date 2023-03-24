@@ -1,0 +1,25 @@
+.color {
+    padding-bottom: 150px;
+    text-align: center;
+
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--black);
+    }
+
+    &__list {
+        display: flex;
+        gap: 80px;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 240px)/4);
+    }
+
+    &__img {
+        margin-bottom: 20px;
+    }
+}
