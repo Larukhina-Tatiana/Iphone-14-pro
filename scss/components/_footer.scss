@@ -1,6 +1,5 @@
 .footer {
-margin-top: -1px;
-    padding: 40px 0 40px;
+    padding: 40px 0;
     background: var(--black);
     color: var(--gray);
 
@@ -17,4 +16,21 @@ margin-top: -1px;
         flex-grow: 1;
     }
 
+    @media screen and (width < 640px) {
+        padding: 10px 0;
+        &__inner {
+            flex-flow: column;
+            gap: 10px;
+        }
+
+        & .logo__img {
+            width: 30px;
+            height: 38px;
+        }
+
+        & .phone {
+            font-size: 18px;
+            line-height: calc(23/18);
+        }
+    }
 }

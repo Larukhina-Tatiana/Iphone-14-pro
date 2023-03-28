@@ -98,6 +98,11 @@ button {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (width < 420px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+}
 
 .menu {
   display: flex;
@@ -105,12 +110,89 @@ button {
   flex-grow: 1;
   flex-basis: 0;
 }
+.menu__btn {
+  display: none;
+}
 .menu__link {
   color: inherit;
 }
+@media screen and (width < 940px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--black);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    transform: translateY(-100%);
+    transition: 0.3s ease;
+  }
+  .menu__btn {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    order: 1;
+    border: none;
+    padding: 0;
+    z-index: 2;
+  }
+  .menu__btn-line {
+    position: absolute;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: var(--gray);
+    transition: 0.3s ease;
+  }
+  .menu__btn-line:nth-child(1) {
+    top: 5px;
+  }
+  .menu__btn-line:nth-child(2) {
+    top: 20px;
+  }
+  .menu__btn-line:nth-child(3) {
+    top: 20px;
+  }
+  .menu__btn-line:nth-child(4) {
+    top: 35px;
+  }
+  .menu-open .menu__btn-line:nth-child(1) {
+    transform: scaleX(0);
+  }
+  .menu-open .menu__btn-line:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .menu-open .menu__btn-line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .menu-open .menu__btn-line:nth-child(4) {
+    transform: scaleX(0);
+  }
+  .menu-open .menu {
+    transform: translateY(0%);
+  }
+  .menu__link {
+    font-size: 56px;
+  }
+}
+@media screen and (width < 420px) {
+  .menu__link {
+    font-size: 32px;
+  }
+}
 
-.logo {
-  margin: 0 auto;
+@media screen and (width < 940px) {
+  .logo {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+  }
 }
 
 .phone {
@@ -121,6 +203,21 @@ button {
   color: currentColor;
   flex-grow: 1;
   flex-basis: 0;
+}
+@media screen and (width < 940px) {
+  .phone {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+}
+@media screen and (width < 420px) {
+  .phone {
+    flex-basis: auto;
+    width: 100%;
+    margin-top: 50px;
+    order: 3;
+  }
 }
 
 .hero {
@@ -370,8 +467,7 @@ button {
 }
 
 .footer {
-  margin-top: -1px;
-  padding: 40px 0 40px;
+  padding: 40px 0;
   background: var(--black);
   color: var(--gray);
 }
@@ -385,4 +481,21 @@ button {
 .footer__link {
   flex-basis: 0;
   flex-grow: 1;
+}
+@media screen and (width < 640px) {
+  .footer {
+    padding: 10px 0;
+  }
+  .footer__inner {
+    flex-flow: column;
+    gap: 10px;
+  }
+  .footer .logo__img {
+    width: 30px;
+    height: 38px;
+  }
+  .footer .phone {
+    font-size: 18px;
+    line-height: 1.2777777778;
+  }
 }/*# sourceMappingURL=style.css.map */
