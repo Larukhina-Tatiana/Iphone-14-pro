@@ -23,6 +23,14 @@
         background: #490E84;
         border-radius: 30px;
         color: #ffffff;
+        border: 1px solid var(--accent);
+        transition: .3s ease;
+
+        &:hover {
+            color: var(--accent);
+            background: #fff;
+            border: 1px solid var(--accent);
+        }
     }
 
     @media screen and (width < 1200px) {

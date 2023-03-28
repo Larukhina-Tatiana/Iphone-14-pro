@@ -12,10 +12,8 @@
     justify-content: space-between;
 
     @media screen and (width < 420px) {
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
-
-    ;
 }
 
 .menu {
@@ -30,6 +28,11 @@
 
     &__link {
         color: inherit;
+        transition: .3s ease;
+
+        &:hover {
+            color: var(--accent);
+        }
     }
 
     @media screen and (width < 940px) {
@@ -56,6 +59,10 @@
             border: none;
             padding: 0;
             z-index: 2;
+            transition: .3s ease;
+            &:hover &-line {
+                background: var(--accent);
+            }
 
             &-line {
                 position: absolute;
@@ -103,12 +110,13 @@
         &-open .menu {
             transform: translateY(0%);
         }
+
         &__link {
             font-size: 56px;
         }
     }
 
-    
+
 
     @media screen and (width < 420px) {
         &__link {
@@ -120,8 +128,6 @@
 
 
 .logo {
-    // margin: 0 auto;
-
     @media screen and (width < 940px) {
         position: relative;
         z-index: 2;
@@ -137,6 +143,11 @@
     color: currentColor;
     flex-grow: 1;
     flex-basis: 0;
+    transition: .3s ease;
+
+        &:hover {
+            color: var(--accent);
+        }
 
     @media screen and (width < 940px) {
         position: relative;

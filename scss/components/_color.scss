@@ -2,7 +2,6 @@
     padding-bottom: 150px;
     text-align: center;
 
-
     &__title {
         margin-bottom: 10px;
         font-weight: 700;
@@ -16,10 +15,13 @@
         text-align: center;
     }
 
-
-
     &__img {
         margin-bottom: 20px;
+        transition: .3s ease;
+
+        &:hover {
+            transform: scaleX(1.2);
+        }
     }
 
     @media screen and (width < 1050px) {
@@ -27,7 +29,6 @@
         &__list {
             flex-wrap: wrap;
             text-align: -webkit-center;
-
         }
 
         &__item,

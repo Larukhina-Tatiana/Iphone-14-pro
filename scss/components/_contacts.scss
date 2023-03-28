@@ -59,6 +59,13 @@
         border-radius: 30px;
         color: #490e84;
         border: transparent;
+        transition: .3s ease;
+
+        &:hover {
+            color:  #fff;
+            background: #574B63;;
+            border: 1px solid #FFFFFF;
+        }
 
     }
 

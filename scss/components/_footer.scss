@@ -14,6 +14,11 @@
     &__link {
         flex-basis: 0;
         flex-grow: 1;
+        transition: .3s ease;
+
+        &:hover {
+            color: var(--accent);
+        }
     }
 
     @media screen and (width < 640px) {
