@@ -8,17 +8,17 @@
         text-align: center;
     }
 
-    & .subtitle {
-        margin-bottom: 72px;
-        color: #FFFFFF;
-        text-align: left;
-
-    }
-
     &__form {
-        padding: 137px 93px;
+        padding: 137px 91px;
         width: 100%;
     }
+
+    & .subtitle {
+        margin-bottom: 62px;
+        color: #FFFFFF;
+        text-align: left;
+    }
+
 
     &__input {
         display: block;
@@ -61,4 +61,42 @@
         border: transparent;
 
     }
+
+    @media screen and (width < 1200px) {
+        background: #574B63;
+
+        &__inner {
+            display: block;
+        }
+
+        &__form {
+            width: auto;
+        }
+
+        & .subtitle {
+            text-align: center;
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    @media screen and (width < 768px) {
+        &__form {
+            padding: 50px 91px;
+        }
+    }
+
+    @media screen and (width < 572px) {
+        &__form {
+            padding: 50px 30px;
+        }
+    }
+    @media screen and (width < 375px) {
+        &__form {
+            padding: 50px 10px;
+        }
+    }
+
 }

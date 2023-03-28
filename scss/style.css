@@ -6,7 +6,7 @@
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -147,6 +147,27 @@ button {
   border-radius: 30px;
   color: #ffffff;
 }
+@media screen and (width < 1200px) {
+  .hero__img {
+    width: 100%;
+  }
+}
+@media screen and (width < 768px) {
+  .hero {
+    padding: 50px 0 30px;
+  }
+}
+@media screen and (width < 560px) {
+  .hero__title {
+    font-size: 34px;
+    line-height: 1.2352941176;
+  }
+  .hero__btn {
+    padding: 16px 90px;
+    font-size: 18px;
+    line-height: 1.2222222222;
+  }
+}
 
 .new {
   padding: 87px 0 150px;
@@ -166,6 +187,22 @@ button {
   font-size: 20px;
   color: var(--black);
 }
+@media screen and (width < 940px) {
+  .new {
+    padding: 50px 0;
+  }
+  .new__img {
+    display: none;
+  }
+  .new__text, .new b {
+    max-width: 100%;
+  }
+}
+@media screen and (width < 768px) {
+  .new {
+    padding: 50px 0 50px;
+  }
+}
 
 .subtitle {
   margin-bottom: 50px;
@@ -175,6 +212,13 @@ button {
   text-align: center;
   text-transform: uppercase;
   color: var(--gray);
+}
+@media screen and (width < 940px) {
+  .subtitle {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 1.1428571429;
+  }
 }
 
 .color {
@@ -189,13 +233,36 @@ button {
 }
 .color__list {
   display: flex;
-  gap: 80px;
-}
-.color__item {
-  flex-basis: calc((100% - 240px) / 4);
+  justify-content: space-between;
+  text-align: center;
 }
 .color__img {
   margin-bottom: 20px;
+}
+@media screen and (width < 1050px) {
+  .color__list {
+    flex-wrap: wrap;
+    text-align: -webkit-center;
+  }
+  .color__item, .color__title, .color__text {
+    width: 50%;
+  }
+  .color__item {
+    margin: 0 auto 30px;
+  }
+}
+@media screen and (width < 768px) {
+  .color {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (width < 560px) {
+  .color__item {
+    width: 100%;
+  }
+  .color__img {
+    width: 100%;
+  }
 }
 
 .contacts__inner {
@@ -205,14 +272,14 @@ button {
   align-items: center;
   text-align: center;
 }
+.contacts__form {
+  padding: 137px 91px;
+  width: 100%;
+}
 .contacts .subtitle {
-  margin-bottom: 72px;
+  margin-bottom: 62px;
   color: #FFFFFF;
   text-align: left;
-}
-.contacts__form {
-  padding: 137px 93px;
-  width: 100%;
 }
 .contacts__input {
   display: block;
@@ -268,6 +335,38 @@ button {
   border-radius: 30px;
   color: #490e84;
   border: transparent;
+}
+@media screen and (width < 1200px) {
+  .contacts {
+    background: #574B63;
+  }
+  .contacts__inner {
+    display: block;
+  }
+  .contacts__form {
+    width: auto;
+  }
+  .contacts .subtitle {
+    text-align: center;
+  }
+  .contacts__img {
+    width: 100%;
+  }
+}
+@media screen and (width < 768px) {
+  .contacts__form {
+    padding: 50px 91px;
+  }
+}
+@media screen and (width < 572px) {
+  .contacts__form {
+    padding: 50px 30px;
+  }
+}
+@media screen and (width < 375px) {
+  .contacts__form {
+    padding: 50px 10px;
+  }
 }
 
 .footer {

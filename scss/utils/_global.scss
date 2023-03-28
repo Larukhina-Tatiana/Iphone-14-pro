@@ -1,7 +1,13 @@
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding:0 15px;
+
+  // @media screen and (width < 1200px) {
+  //   width: 800px;
+  // margin: 0 auto;
+  // padding:0 15px;
+  // }
   // outline: 1px solid rebeccapurple;
 }
 
